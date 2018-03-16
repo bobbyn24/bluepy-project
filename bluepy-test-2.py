@@ -35,17 +35,17 @@ for dev in devices:
         services = p.getServiceByUUID("F000AA80-0451-4000-B000-000000000000")
         characs = services.getCharacteristics()
         print(characs)
-        actCharacs = bytes.fromhex("007F")
+        actCharacs = bytes.fromhex("F700")
         print(actCharacs)
         angleMult = 360/255
         characs[1].write(actCharacs)
         while True:
-            print(characs[0].read())
-##            a = characs[0]read().hex()
-##            a = str(a)
-##            print(a)
-##            X = a[0] + a[1]
-##            Y = a[2] + a[3]
+            a = characs[0].read().hex()
+            a = str(a)
+            X = a[0:4]
+            X = angleToSignedInt(X)
+            X = (X * 1.0) / (65536 / 500)
+            print("X = ",X)
 ##            Z = a[4] + a[5]
 ##            angles = [X, Y, Z]
 ##            i = 0
