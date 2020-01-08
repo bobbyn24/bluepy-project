@@ -3,7 +3,7 @@ Python script that interfaces with the TI CC2650 SensorTag microcontroller, spec
 
 ![Position on abdomen](sensortag-position.png)
 
-Created as a part of the Sensory Information Technologies for Sleep Monitoring Research Project.
+Created as a part of the Sensory Information Technologies for Sleep Monitoring Research Project at the Advanced Materials and Process Engineering Laboratory.
 
 *Thank You To:*  
 Professor John Madden  
