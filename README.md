@@ -4,7 +4,15 @@ Python program that interfaces with the TI CC2650 SensorTag microcontroller, spe
 
 ![Position on abdomen](sensortag-position.png)
 
-Since data is sent as bytes from the sensor, we converted them into hexadecimal numbers, then to integers, then did the necessary calculations to find the gravitational acceleration (in Gs) on each axis, and then found the angles of rotation from that.
+Data sent from the SensorTag is converted to integers which are used to calculate gravitational acceleration (in Gs) on each axis. 
+
+To find the angle of rotation on the X axis, the arc tangent 2 of the gravitational acceleration on the Y axis is divided by the gravitational acceleration on the Z axis. Since there would be issues if the gravitational acceleration on the Z axis was 0, a negligible number is added number every time Z reached 0 Gs.
+
+PHOTO
+
+To find the angle of rotation on the Z axis (Gp being the gravitational acceleration on any given axis):
+
+PHOTO
 
 Created as a part of the Sensory Information Technologies for Sleep Monitoring Research Project at the Advanced Materials and Process Engineering Laboratory.
 
