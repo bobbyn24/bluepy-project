@@ -13,6 +13,8 @@ To find the angle of rotation on the Y axis (Gp being the gravitational accelera
 
 ![Y axis calculation](y-calculation.png)
 
+Finally, the 3D simulation is created by plotting the vertices, connecting them, and creating surfaces between them (with the help of [the PyOpenGL library](http://pyopengl.sourceforge.net/ "PyOpenGL library")). The rotation matrix is then translated by the angles given by our previous calculations (on the X axis and on the Y axis).
+
 ### Created as a part of the Sensory Information Technologies for Sleep Monitoring Research Project at the Advanced Materials and Process Engineering Laboratory.
 
 The project is run by a group of students and professors at UBC, developing different sensors that work together to detect sleep disorders. The goal is to develop a sleep disorder diagnosis system that can be used at home. The user would wear all of the sensors (EEG, EKG, EMG, etc) which would work in a body sensor network, which includes a central device (computer or smartphone) that processes the data and determines whether they have a sleep disorder, and if so which one.
