@@ -9,7 +9,7 @@ Data sent from the SensorTag is converted to integers which are used to calculat
 
 ![X axis calculation](x-calculation.png)
 
-To find the angle of rotation on the Z axis (Gp being the gravitational acceleration on any given axis):
+To find the angle of rotation on the Y axis (Gp being the gravitational acceleration on any given axis):
 
 ![Z axis calculation](z-calculation.png)
 
