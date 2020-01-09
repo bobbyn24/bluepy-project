@@ -13,7 +13,7 @@ To find the angle of rotation on the Y axis (Gp being the gravitational accelera
 
 ![Y axis calculation](y-calculation.png)
 
-Finally, the 3D simulation is created by plotting the vertices, connecting them, and creating surfaces between them (with the help of [the PyOpenGL library](http://pyopengl.sourceforge.net/ "PyOpenGL library")). The rotation matrix is then translated by the angles given by our previous calculations (on the X axis and on the Y axis).
+Finally, the 3D simulation is created by plotting the vertices, connecting them, and creating surfaces between them (with the help of [the PyOpenGL library](http://pyopengl.sourceforge.net/ "PyOpenGL library")). The rotation matrix is then translated by the angles given by our previous calculations (on the X and Y axes).
 
 ### Created as a part of the Sensory Information Technologies for Sleep Monitoring Research Project at the Advanced Materials and Process Engineering Laboratory.
 
