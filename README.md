@@ -5,19 +5,19 @@ Python program that interfaces with the TI CC2650 SensorTag microcontroller, spe
 ![Position on chest](sensortag-position.png)
 
 ## Calculations
-Data sent from the SensorTag in bytes is converted to integers which are used to calculate gravitational acceleration (in Gs) on each axis. To find the angle of rotation on the X axis, the arc tangent 2 of the gravitational acceleration on the Y axis is divided by the gravitational acceleration on the Z axis. Since there would be issues if the gravitational acceleration on the Z axis was 0, a negligible number is added number every time Z reached 0 Gs.
+Data sent from the SensorTag in hexadecimal format is converted to integers which are used to calculate gravitational acceleration (in Gs) on each axis. To find the angle of rotation on the X axis, the arc tangent 2 of the gravitational acceleration on the Y axis is divided by the gravitational acceleration on the Z axis. Since there would be issues if the gravitational acceleration on the Z axis was 0, a negligible number is added every time Z reaches 0 Gs.
 
 ![X axis calculation](x-calculation-2.png)
 
-To find the angle of rotation on the Y axis (Gp being the gravitational acceleration on any given axis):
+To find the angle of rotation on the Y axis where Gp is the gravitational acceleration on any given axis:
 
 ![Y axis calculation](y-calculation-2.png)
 
-Finally, the 3D simulation is created by plotting the vertices, connecting them, and creating surfaces between them (with the help of [the PyOpenGL library](http://pyopengl.sourceforge.net/ "PyOpenGL library")). The rotation matrix is then translated by the angles given by our previous calculations (on the X and Y axes).
+Finally, the 3D simulation is created by plotting the vertices, connecting them, and creating surfaces between them using [the PyOpenGL library](http://pyopengl.sourceforge.net/ "PyOpenGL library"). The rotation matrix is then translated by the angles given by our previous calculations (on the X and Y axes).
 
 ### Created as a part of the Sensory Information Technologies for Sleep Monitoring Research Project at the Advanced Materials and Process Engineering Laboratory.
 
-The project is run by a group of students and professors at UBC, developing different sensors that work together to detect sleep disorders. The goal is to develop a sleep disorder diagnosis system that can be used at home. The user would wear all of the sensors (EEG, EKG, EMG, etc) which would work in a body sensor network, which includes a central device (computer or smartphone) that processes the data and determines whether the user has a sleep disorder, and if so which one.
+The project is run by a group of students and professors at UBC developing different sensors that work together to detect sleep disorders. The goal is to develop a low cost sleep disorder diagnosis system that can be used at home. The user would wear all of the sensors (EEG, EKG, EMG, etc) which would work in a body sensor network. The network includes a central device (computer or smartphone) that processes the data and determines whether the user has a sleep disorder, and if so which one.
 
 *Thank You To:*  
 Professor John Madden (Electrical and Computer Engineering at UBC)  
