@@ -11,7 +11,7 @@ Data sent from the SensorTag is converted to integers which are used to calculat
 
 To find the angle of rotation on the Y axis (Gp being the gravitational acceleration on any given axis):
 
-![Y axis calculation](y-calculation.png)
+![Y axis calculation](y-calculation-2.png)
 
 Finally, the 3D simulation is created by plotting the vertices, connecting them, and creating surfaces between them (with the help of [the PyOpenGL library](http://pyopengl.sourceforge.net/ "PyOpenGL library")). The rotation matrix is then translated by the angles given by our previous calculations (on the X and Y axes).
 
