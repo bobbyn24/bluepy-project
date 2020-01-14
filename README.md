@@ -5,9 +5,9 @@ Python program that interfaces with the TI CC2650 SensorTag microcontroller, spe
 ![Position on chest](README-files/sensortag-position.png)
 
 ## Calculations
-Data sent from the SensorTag in hexadecimal format is converted to integers which are used to calculate gravitational acceleration (in Gs) on each axis. 
+Data sent from the SensorTag in hexadecimal format is converted to integers which are used to calculate gravitational acceleration (in Gs) on each axis.
 
-To find the angle of rotation on the X axis, the arc tangent 2 of the gravitational acceleration on the Y axis is divided by the gravitational acceleration on the Z axis. Since there would be issues if the gravitational acceleration on the Z axis was 0, a negligible number is added every time Z reaches 0 Gs.
+To find the angle of rotation on the X axis, the arc tangent 2 of the gravitational acceleration on the Y axis is divided by the gravitational acceleration on the Z axis. Since there would be issues if the gravitational acceleration on the Z axis was 0, a negligible number is added every time Z reaches 0 Gs.  
 ![X axis calculation](README-files/x-calculation-2.png)  
 To find the angle of rotation on the Y axis where Gp is the gravitational acceleration on any given axis:
 ![Y axis calculation](README-files/y-calculation-2.png)  
