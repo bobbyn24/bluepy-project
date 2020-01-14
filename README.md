@@ -9,7 +9,7 @@ Data sent from the SensorTag in hexadecimal format is converted to integers whic
 
 To find the angle of rotation on the X axis, the arc tangent 2 of the gravitational acceleration on the Y axis is divided by the gravitational acceleration on the Z axis. Since there would be issues if the gravitational acceleration on the Z axis was 0, a negligible number is added every time Z reaches 0 Gs.  
 ![X axis calculation](README-files/x-calculation-2.png)  
-To find the angle of rotation on the Y axis where Gp is the gravitational acceleration on any given axis:
+To find the angle of rotation on the Y axis (where Gp is the gravitational acceleration on any given axis):
 ![Y axis calculation](README-files/y-calculation-4.png)  
 Finally, the 3D simulation is created by plotting the vertices, connecting them, and creating surfaces between them using [the PyOpenGL library](http://pyopengl.sourceforge.net/ "PyOpenGL library"). The rotation matrix is then translated by the angles given by our previous calculations (on the X and Y axes).
 
